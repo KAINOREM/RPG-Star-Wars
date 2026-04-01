@@ -4,6 +4,11 @@
 
 using namespace std;
 
+// Funcao para rolar um dado de 6 lados
+int rolarDado() {
+    return rand() % 6 + 1;
+}
+
 int main() {
     srand(time(0));
 
