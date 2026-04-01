@@ -1,6 +1,5 @@
 #include <iostream>
 
-//Oi bonitão
 int main() {
     srand(time(0));
 
