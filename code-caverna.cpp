@@ -1,14 +1,19 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <windows.h>
 #include <thread>
 #include <chrono>
+#include <limits>
 
 using namespace std;
 
 void sinal();
 void caverna();
+void esperarEnter() {
+    cout << "Continuar...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.get();
+}
 
 // Funcao para rolar um dado de 6 lados
 int rolarDado() {
@@ -17,8 +22,7 @@ int rolarDado() {
 
 int main(){
     int escolha;
-    SetConsoleOutputCP(CP_UTF8);
-    SetConsoleCP(CP_UTF8);
+   
 
     cout << "===============x=====================\n";
     cout << " UMA AVENTURA STAR WARS\n";
@@ -65,8 +69,7 @@ void sinal() {
     cout << "Sua nave colide violentamente contra um dos blocos de gelo.\n";
     cout << "O impacto é brutal.\n";
     cout << "Sua visão escurece… e tudo fica em silêncio.\n";
-    cout << "Continuar\n";
-    cin >> escolha;
+    esperarEnter();
    
     system("clear");
 
@@ -139,7 +142,7 @@ void sinal() {
             cout << "Eu vou te derrubar aqui e agora, sozinho, e mostrar a todos do que sou capaz.\n";
             cout << "\nEle corre em sua direção, com seu bastão eletrificado.\n";
             cout << "Entrar em Combate\n";
-            cin >> escolha;
+            esperarEnter();
            
             system("clear");
             cout << "====================================\n";
@@ -160,9 +163,8 @@ void sinal() {
                 cout << "Você ativa seu sabre de luz e parte para o ataque.\n";
                 cout << "Vanderlei tenta se defender com o bastão, mas não entende com o que está lidando.\n";
                 cout << "O sabre atravessa o metal como se fosse nada.\n";
-                cout << "O bastão é cortado ao meio… e Vanderlei também.";
-                cout << "Continuar\n";
-                cin >> escolha;
+                cout << "O bastão é cortado ao meio… e Vanderlei também.\n";
+                esperarEnter();
 
             } else if (escolha == 2) {
                 system("clear");
@@ -170,8 +172,7 @@ void sinal() {
                 cout << "Você decide usar a força\n";
                 cout << "Vanderlei é arremessado com violência contra a parede.\n";
                 cout << "Ele bate a cabeça com força e cai no chão, desacordado.\n";
-                cout << "Continuar\n";
-                cin >> escolha;
+                esperarEnter();
 
             } else if (escolha == 3) {
                 system("clear");
@@ -180,8 +181,7 @@ void sinal() {
                 cout << "Vanderlei avança com tudo, mas se atrapalha no próprio movimento.\n";
                 cout << "Ele tropeça, perde o controle do bastão e acaba se eletrocutando.\n";
                 cout << "O choque o derruba imediatamente.\n";
-                cout << "Continuar\n";
-                cin >> escolha;
+                esperarEnter();
             }
 
             system("clear");
@@ -215,9 +215,8 @@ void sinal() {
                 cout << "\nE acontece.";
                 cout << "\nO Destroyer abre fogo contra você.";
                 cout << "\nO primeiro tiro passa longe.";
-
-                cout << "\nContinuar\n";
-                cin >> escolha;
+                esperarEnter();
+                
                 system("clear");
                 this_thread::sleep_for(chrono::seconds(1));
                 cout << ".\n";
