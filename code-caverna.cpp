@@ -20,7 +20,7 @@ int main(){
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 
-    cout << "====================================\n";
+    cout << "===============x=====================\n";
     cout << " UMA AVENTURA STAR WARS\n";
     cout << "====================================\n";
 
