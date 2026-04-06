@@ -486,7 +486,7 @@ void caverna() {
         }
 
         if (vidaMonstro > 0) {
-            if (dadoMonstro >= 5) {
+            if (dadoMonstro >= 4) {
                 if (defendendo) {
                     cout << "O Guardião atinge você, mas sua defesa reduz o impacto.\n";
                     cout << "Você perdeu 1 de vida.\n";
